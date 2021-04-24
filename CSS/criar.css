@@ -1,0 +1,10 @@
+/* *{margin:0px;;padding:0px;}
+body{background:#3b0714;}
+form{height:950px;margin:50px 0px 0px 0px;background:#3b2822;display:table;}
+input{display:block;margin:10px 0px 10px 255px;}
+h2{text-align:center;font-weight:normal;font-family:Arial;color:white;}
+h1{text-align:center;font-weight:normal;font-family:Arial;color:white;}
+textarea{width:300px;height:100px;margin:10px 0px 10px 200px;}
+input[type=submit]{width:100px;height:30px;background:white;margin-left:280px;} */
+form{width:50%;margin:10px auto 0px auto;}
+body{background:brown;}

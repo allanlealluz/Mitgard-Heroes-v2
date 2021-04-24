@@ -1,0 +1,13 @@
+/* *{margin:0px;padding:0px;}
+body{background:#3b0714;}
+h2{text-align:center;font-weight:normal;font-family:Arial;color:white;}
+form{width:50%;height:200px;margin:150px auto 0px auto;background:#3b2822;display:table;box-shadow: 5px 5px 20px black }
+input{display:block;width:300px;height:50px;margin:10px auto 0px auto;}
+input[type=submit]{width:305px;} */
+body{background:brown !important;}
+form{width:50%;margin:10px auto 0px auto;}
+p{text-align:center;}
+input{margin-bottom:5px !important;}
+
+
+
