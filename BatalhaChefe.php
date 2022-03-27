@@ -5,35 +5,25 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="icon" href="icon.jfif">
-        <title>Mitgard_Heroes</title>
+        <title></title>
         <link rel="stylesheet" href="CSS/Auxiliar-de_batalha.css">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
         <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
     </head>
-    <body>  
-        <h1 id="mitgard">Mitgard Heroes</h1>
-        <h2 id="batalha">Escolha o tipo de batalha</h2>
-        <a href="Batalha1v1.php">Batalha 1x1</a>
-        <a href="BatalhaChefe.php">Batalha Chefe</a>
-        <a href="Batalha3v3.php">Batalha 3x3</a>
-       <!-- comment 
-        <div class="area" id='area'>
+    <body>
+            <div class="area" id='area'>
            <div class="espaco" id="11" name="espaco"  style="border:1px solid black;background:white;"onclick="ListarPersonagem(this.id)">oi</div>
            <div class="espaco" id="12" name="espaco"    style="border:1px solid black;background:white;"onclick="ListarPersonagem(this.id)">oi</div>
            <div class="espaco" id="13" name="espaco"    style="border:1px solid black;background:white;"onclick="ListarPersonagem(this.id)">oi</div> 
            <div class="espaco" id="14" name="espaco"    style="border:1px solid black;background:white;"onclick="ListarPersonagem(this.id)">oi</div>
         </div>
-       -->
+       
         <div id="dados-personagem"></div>
-        <!--
+        
          <div class="area" id='area'>
-           <div class="espaco" id="21" name="espaco"   style="border:1px solid black;background:white;" onclick="ListarPersonagem(this.id)">oi</div>
-           <div class="espaco" id="22" name="espaco"   style="border:1px solid black;background:white;" onclick="ListarPersonagem(this.id)">oi</div>
-           <div class="espaco" id="23" name="espaco"   style="border:1px solid black;background:white;" onclick="ListarPersonagem(this.id)">oi</div> 
-           <div class="espaco"  id="24" name="espaco"   style="border:1px solid black;background:white;" onclick="ListarPersonagem(this.id)">oi</div>
+           <div class="espaco chefe" id="21" name="espaco"   style="border:1px solid black;background:white;" onclick="ListarPersonagem(this.id)">oi</div>        
         </div>
-       -->
+      
          <div id="escolha"></div>
         <script>
              var div = document.getElementById('escolha')
@@ -148,5 +138,5 @@
        })
     }
         </script>
-        
     </body>
+</html>

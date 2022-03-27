@@ -1,4 +1,4 @@
-
+/*#lateral{background:radial-gradient(red,orange);}*/
   /*width: 130px;
   -webkit-transition: width 0.4s ease-in-out;
   transition: width 0.4s ease-in-out;/*
@@ -8,3 +8,8 @@ input[type=text] {
   width: 45vw;
 }
 #lateral{width:50%;height:80vh;position:absolute;left:50vw;top:0}
+
+:root{
+    --colorifico:red;
+}
+#sugestao{color:var(--colorifico);}

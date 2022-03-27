@@ -33,8 +33,19 @@
             <input type="text" name="vida" class="form-control"> 
             <h2>Defesa</h2>
             <input type="text" name="defesa" class="form-control"> 
+            <h2>Ini</h2> 
+            <input type="text" name="ini" class="form-control"> 
             <h2>Armadura</h2> 
             <input type="text" name="armadura" class="form-control"> 
+            <h2>Duração da Armadura</h2> 
+            <input type="text" name="duracao" class="form-control">
+            <h2>Raridade</h2> 
+            <select name='rari'>
+                <option val='comun'>comun</option>
+                <option val='raro'>raro</option>
+                <option val='epico'>epico</option>
+                <option val='lendario'>lendario</option>
+            </select>
             <h2>Foto</h2>
             <input type="file" name="foto" class="form-control"> 
             <h2>Banner</h2>
@@ -55,7 +66,10 @@
             $hab5 = htmlentities(addslashes($_POST['hab5'])); 
             $vida = htmlentities(addslashes($_POST['vida'])); 
             $defesa = htmlentities(addslashes($_POST['defesa'])); 
+            $ini = htmlentities(addslashes($_POST['ini'])); 
             $armadura = htmlentities(addslashes($_POST['armadura'])); 
+            $rari = htmlentities(addslashes($_POST['rari']));
+            $duracao_arm = htmlentities(addslashes($_POST['duracao']));
             if(isset($_FILES['foto'])){
                 $nome_arquivo = rand(1,999).$_FILES['foto']['name'];
                 move_uploaded_file($_FILES['foto']['tmp_name'], "imagens/".$nome_arquivo);             
@@ -67,7 +81,7 @@
                if(!empty($_FILES['foto']) || !empty($_FILES['banner'])){
                     require_once 'Funcoes.php';
         $con = new Funcoes("localhost", 'mitgard', 'root','', 'utf8');
-        $con->InserirPersonagem($nome, $descricao, $hab1, $hab2, $hab3, $hab4, $hab5,$vida,$defesa,$armadura, $nome_arquivo, $nome_banner);
+        $con->InserirPersonagem($nome, $descricao, $hab1, $hab2, $hab3, $hab4, $hab5,$vida,$defesa,$ini,$armadura, $duracao_arm,$rari,$nome_arquivo, $nome_banner);
         header('location:index.php');
             }
         }

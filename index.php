@@ -40,6 +40,7 @@ $dados = $con->BuscarPersonagens();
         
         ?>
             <a href="Auxiliar_de_batalha.php">Auxiliar de Batalha</a>
+            <a href="teste_sugestao_instatenea.php">Teste sugestão</a>
     </div>
         
     <a href="index.php?buscar_melhores"><span><i class="fab fa-ethereum red"></i></span></a>

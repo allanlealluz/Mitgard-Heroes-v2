@@ -1,0 +1,8 @@
+*{margin:0px;padding:0px;}
+#escolha{position:absolute;top:0;right:0;}
+.area{margin-bottom:20px;width:40%;height:50%;}
+.espaco{width:100%;height:25%;}
+body{background-color:#ad1c23 !important}
+.esquerda{width:50%;float:left;}
+.direita{width:50%;float:left;}
+#dados-personagem{width:50vw;height:auto;background:lightgray;}

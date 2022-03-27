@@ -21,6 +21,7 @@
         foreach ($dados as $v){
             ?><h2 ><?php echo $v['nome']; ?></h2><?php
             ?><h2 >Vida:<?php echo $v['vida']; ?></h2><?php
+            ?><h2 >Iniciativa:<?php echo $v['ini']; ?></h2><?php
             ?><h2>Defesa:<?php echo $v['defesa']; ?></h2><?php
             ?><h2>Armadura:<?php echo $v['armadura']; ?></h2> </div> <div class="p-3 mb-2 bg-danger" id='parte-baixo'><?php
             ?><img src="imagens/<?php echo $v['banner'] ?>"> 

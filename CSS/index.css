@@ -15,7 +15,7 @@ h5{text-align:center;font-size:30px;color:orange;font-weight:normal;font-family:
 #botaos{width:20px; height:10px;position:absolute;top:109px;left:200px; } */
 body{background-color:brown !important;}
 td a {color:black !important;}
-a{color:black !important;margin-left:2vw;font-size:2vw;}
+a{color:black !important;margin-left:2vw;font-size:100%;}
 a i{color:#aaffff;}
 table{background:white !important;width:100vw !important;}
 img{height:100px;max-width:100px;width:auto;object-fit: fill;}

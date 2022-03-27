@@ -13,8 +13,8 @@ Class Funcoes{
         }
        
     }
-    function InserirPersonagem($nome,$descricao,$hab1,$hab2,$hab3,$hab4,$hab5,$vida,$defesa,$armadura,$imagem = array() ,$banner = array()){
-        $cmd = $this->pdo->prepare("INSERT INTO personagens (nome,descricao,hab1,hab2,hab3,hab4,hab5,vida,defesa,armadura,nome_imagem,banner) VALUES (:n,:d,:h1,:h2,:h3,:h4,:h5,:v,:s,:a,:i,:b)");
+    function InserirPersonagem($nome,$descricao,$hab1,$hab2,$hab3,$hab4,$hab5,$vida,$defesa,$ini,$armadura,$duracao_arm,$raridade,$imagem = array() ,$banner = array()){
+        $cmd = $this->pdo->prepare("INSERT INTO personagens (nome,descricao,hab1,hab2,hab3,hab4,hab5,vida,defesa,ini,armadura,duracao_arm,nome_imagem,banner,raridade) VALUES (:n,:d,:h1,:h2,:h3,:h4,:h5,:v,:s,:in,:a,:d,:i,:b,:r)");
         $cmd->bindValue(":n", $nome);
         $cmd->bindValue(":d", $descricao);
         $cmd->bindValue(":h1", $hab1);
@@ -24,9 +24,12 @@ Class Funcoes{
         $cmd->bindValue(":h5", $hab5);
         $cmd->bindValue(":v", $vida);
         $cmd->bindValue(":s", $defesa);
+        $cmd->bindValue(':in', $ini);
         $cmd->bindValue(":a", $armadura);
+        $cmd->bindValue('d', $duracao_arm);
         $cmd->bindValue(":i", $imagem);
         $cmd->bindValue(":b", $banner);
+        $cmd->bindValue(":r", $raridade);
         $cmd->execute();
     }
     function BuscarPersonagens(){
@@ -41,7 +44,9 @@ Class Funcoes{
         $dados = $cmd->fetchAll();
         return $dados;
     }
-
+    function BuscarPersonagemPorRari(){
+        
+    }
     function BuscarPersonagensPorNome($nome){
         $cmd = $this->pdo->prepare("SELECT AVG(nota) as avaliacao,personagens.nome_imagem, personagens.nome,personagens.id, AVG(avaliação.mundo) as mun, AVG(avaliação.chefe)as che FROM avaliação  JOIN personagens ON personagens.id = avaliação.fk_personagem  WHERE personagens.nome LIKE CONCAT('%',:n,'%')  group by personagens.nome ");
         $cmd->bindValue(":n", $nome);
